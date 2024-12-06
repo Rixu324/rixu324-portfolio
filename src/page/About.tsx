@@ -1,6 +1,6 @@
 import icon from "/src/assets/icon.png";
 
-export default function AboutPage() {
+const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#f5f2ed] px-4 py-12 md:py-24">
       <div className="container mx-auto max-w-4xl">
@@ -67,4 +67,6 @@ export default function AboutPage() {
       </div>
     </div>
   );
-}
+};
+
+export default AboutPage;

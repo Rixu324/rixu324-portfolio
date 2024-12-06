@@ -7,7 +7,7 @@ import AboutPage from "./page/About";
 const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#f5f2ed]">
-      <Router>
+      <Router basename="https://www.rixu.info">
         <div className="container mx-auto px-4 py-8">
           <Navigation />
           <Routes>
