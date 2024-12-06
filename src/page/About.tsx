@@ -53,7 +53,7 @@ const AboutPage: React.FC = () => {
               <p className="text-gray-600 mb-4">
                 Twitch:{" "}
                 <a
-                  href="https://www.twitch.tv"
+                  href="https://www.twitch.tv/ultimate_chan_"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline"
