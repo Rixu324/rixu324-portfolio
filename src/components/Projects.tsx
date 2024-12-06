@@ -1,5 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { X } from "lucide-react";
+import {
+  SiReact,
+  SiDiscord,
+  SiVercel,
+  SiPrisma,
+  SiTypescript,
+  SiValorant,
+} from "react-icons/si";
+import { FaNode, FaPython } from "react-icons/fa6";
+import { RiTailwindCssLine } from "react-icons/ri";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { FaYoutube } from "react-icons/fa";
+import wingman from "../assets/wingman.png";
+import aquaBeats from "../assets/qauaBeats.png";
 
 interface Project {
   id: number;
@@ -7,34 +21,96 @@ interface Project {
   description: string;
   image: string;
   details: string;
+  type?: "BOT" | "web" | "other";
+  technologies?: string[];
+  value1?: string;
+  value2?: string;
 }
+
+const iconMap: Record<string, JSX.Element> = {
+  React: <SiReact className="text-blue-500" />,
+  "Discord.js": <SiDiscord className="text-blue-700" />,
+  Vercel: <SiVercel className="text-black" />,
+  "Node.js": <FaNode className="text-blue-700" />,
+  "Tailwind CSS": <RiTailwindCssLine className="text-blue-700" />,
+  Prisma: <SiPrisma className="text-blue-700" />,
+  Postgres: <BiLogoPostgresql className="text-blue-700" />,
+  TypeScript: <SiTypescript className="text-blue-700" />,
+  Python: <FaPython className="text-blue-700" />,
+  Valorant: <SiValorant className="text-red-700" />,
+  Youtube: <FaYoutube className="text-red-700" />,
+};
 
 const projects: Project[] = [
   {
     id: 1,
-    title: "プロジェクト1",
-    description: "プロジェクト1の簡単な説明",
-    image: "/placeholder.svg?height=200&width=300",
+    title: "ウィングマンくん",
+    description: "Discordで使えるvalorant用BOT",
+    image: wingman,
     details:
       "プロジェクト1の詳細な説明をここに記述します。使用した技術、課題、解決策などを含めます。",
+    type: "BOT",
+    value1:
+      "https://discord.com/oauth2/authorize?client_id=1188759163153682433",
+    value2: "https://discord.gg/jaQSkdJXpk",
+    technologies: [
+      "TypeScript",
+      "Node.js",
+      "Python",
+      "Discord.js",
+      "Prisma",
+      "Postgres",
+      "Valorant",
+    ],
   },
   {
     id: 2,
-    title: "プロジェクト2",
-    description: "プロジェクト2の簡単な説明",
-    image: "/placeholder.svg?height=200&width=300",
+    title: " AquaBeats",
+    description: "discordで音楽流せます。",
+    image: aquaBeats,
     details:
-      "プロジェクト2の詳細な説明をここに記述します。使用した技術、課題、解決策などを含めます。",
+      "youtubeの動画をdiscord上で再生できるBOTです。プレイリストも対応しています。ボタン一つで次の曲へ行ったり曲を止めたりできるので、他のBOTと比べて利便性が高いのが特徴です。",
+    type: "BOT",
+    value1:
+      "https://discord.com/oauth2/authorize?client_id=1270541180828127365",
+    value2: "https://discord.gg/jaQSkdJXpk",
+    technologies: ["TypeScript", "Node.js", "Discord.js", "Youtube"],
   },
-  // 他のプロジェクトを追加
+  {
+    id: 3,
+    title: "俺のポートフォリオ",
+    description: "まぁ、これっすね",
+    image: "/placeholder.svg?height=200&width=300",
+    details: "これよね",
+    type: "web",
+    value1: "http://localhost:5173/#works",
+    value2: "",
+    technologies: ["React", "Tailwind CSS", "Vercel"],
+  },
 ];
 
 const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      const projectElements = document.querySelectorAll(".project-card");
+      projectElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+          el.classList.add("animate-fadeIn");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <section id="projects" className="my-16">
-      <h2 className="text-3xl font-bold text-sky-800 mb-4">プロジェクト</h2>
+      <h2 className="text-3xl font-bold text-black-800 mb-4 text-center mr-auto">
+        プロジェクト
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
           <div
@@ -58,7 +134,10 @@ const Projects: React.FC = () => {
       </div>
 
       {selectedProject && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-[1000]"
+          style={{ zIndex: 1000 }}
+        >
           <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-center mb-4">
@@ -72,12 +151,71 @@ const Projects: React.FC = () => {
                   <X size={24} />
                 </button>
               </div>
-              <img
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                className="w-full h-64 object-cover rounded mb-4"
-              />
+              {selectedProject.type !== "web" && (
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full h-64 object-cover rounded mb-4"
+                />
+              )}
+              {selectedProject.type === "web" && selectedProject.value1 && (
+                <div className="mt-4">
+                  <iframe
+                    src={selectedProject.value1}
+                    className="w-full h-[500px] border rounded"
+                    title={`${selectedProject.title} Web View`}
+                  ></iframe>
+                </div>
+              )}
               <p className="text-gray-700">{selectedProject.details}</p>
+
+              {selectedProject.technologies && (
+                <div className="mt-4">
+                  <h4 className="text-lg font-bold text-sky-700 mb-2">
+                    使用技術:
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedProject.technologies.map((tech, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center bg-gray-100 rounded-full px-4 py-2 shadow-sm border border-gray-300"
+                      >
+                        {iconMap[tech] && (
+                          <span className="mr-2">{iconMap[tech]}</span>
+                        )}
+                        <span className="text-gray-700 text-sm">{tech}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {selectedProject.type === "BOT" && (
+                <div className="mt-4 flex justify-center gap-4">
+                  <a
+                    href={selectedProject.value1}
+                    className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-center"
+                  >
+                    Invite
+                  </a>
+                  <a
+                    href={selectedProject.value2}
+                    className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 text-center"
+                  >
+                    サポートサーバーへ
+                  </a>
+                </div>
+              )}
+              {selectedProject.type === "web" && (
+                <div className="mt-4 flex justify-center">
+                  <a
+                    href={selectedProject.value1}
+                    className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-500 text-center"
+                  >
+                    サイトへ
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>
