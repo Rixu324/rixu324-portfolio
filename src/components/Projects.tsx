@@ -48,7 +48,7 @@ const projects: Project[] = [
     description: "Discordで使えるvalorant用BOT",
     image: wingman,
     details:
-      "プロジェクト1の詳細な説明をここに記述します。使用した技術、課題、解決策などを含めます。",
+      "ウィングマンくんは、Valorantのカスタムマッチでいろいろ手助けをしてくれるBOTです。ランダムでチーム分けをしたり、ランダムでマップなどを出してくれます。",
     type: "BOT",
     value1:
       "https://discord.com/oauth2/authorize?client_id=1188759163153682433",
@@ -66,7 +66,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: " AquaBeats",
-    description: "discordで音楽流せます。",
+    description: "Discordで音楽流せます。",
     image: aquaBeats,
     details:
       "youtubeの動画をdiscord上で再生できるBOTです。プレイリストも対応しています。ボタン一つで次の曲へ行ったり曲を止めたりできるので、他のBOTと比べて利便性が高いのが特徴です。",
@@ -83,7 +83,7 @@ const projects: Project[] = [
     image: "/placeholder.svg?height=200&width=300",
     details: "これよね",
     type: "web",
-    value1: "http://localhost:5173/#works",
+    value1: "https://www.rixu.info",
     value2: "",
     technologies: ["React", "Tailwind CSS", "Vercel"],
   },
@@ -109,7 +109,7 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="my-16">
       <h2 className="text-3xl font-bold text-black-800 mb-4 text-center mr-auto">
-        プロジェクト
+        つくったやつ
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (

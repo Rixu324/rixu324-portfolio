@@ -4,18 +4,19 @@ const Navigation: React.FC = () => {
   return (
     <nav className="flex justify-between items-center mb-20">
       <div className="w-12 h-12 relative">
-        {/* <Image
-          src="/placeholder.svg?height=48&width=48"
+        <img
+          src="/src/assets/icon.jpg"
           alt="Logo"
           width={48}
           height={48}
           className="rounded-full"
-        /> */}
+          style={{ width: "48px", height: "48px" }}
+        />
       </div>
       <ul className="flex space-x-8">
         <li>
           <a
-            href="#works"
+            href="#projects"
             className="text-sky-400 hover:text-sky-600 transition-colors"
           >
             WORKS
