@@ -1,3 +1,5 @@
+import icon from "/src/assets/icon.png";
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#f5f2ed] px-4 py-12 md:py-24">
@@ -10,7 +12,7 @@ export default function AboutPage() {
         <div className="grid gap-8 md:grid-cols-[1fr_2fr]">
           <div className="space-y-4">
             <img
-              src="/src/assets/icon.png"
+              src={icon}
               alt="Profile"
               width="300"
               height="300"

@@ -1,4 +1,5 @@
 import React from "react";
+import icon from "../assets/teitterアイコン.png";
 
 const Navigation: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const Navigation: React.FC = () => {
           className="text-sky-400 hover:text-sky-600 transition-colors"
         >
           <img
-            src="/src/assets/icon.png"
+            src={icon}
             alt="Logo"
             width={48}
             height={48}
