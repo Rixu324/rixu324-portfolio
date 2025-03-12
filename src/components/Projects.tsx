@@ -47,8 +47,7 @@ const projects: Project[] = [
     title: "ウィングマンくん",
     description: "Discordで使えるvalorant用BOT",
     image: wingman,
-    details:
-      "ウィングマンくんは、Valorantのカスタムマッチでいろいろ手助けをしてくれるBOTです。ランダムでチーム分けをしたり、ランダムでマップなどを出してくれます。",
+    details: `ウィングマンくんは、Valorantのカスタムマッチでいろいろ手助けをしてくれるBOTです。ランダムでチーム分けをしたり、ランダムでマップなどを出してくれます。`,
     type: "BOT",
     value1:
       "https://discord.com/oauth2/authorize?client_id=1188759163153682433",

@@ -19,10 +19,10 @@ const Hero: React.FC = () => {
       {/* メインコンテンツ */}
       <div className="relative z-10 text-center">
         <h1 className="text-5xl font-bold mb-6 tracking-wider">
-          Rixu PortFolio
+          Rixu's PortFolio
         </h1>
         <p className="text-sm tracking-[0.5em] uppercase">
-          kore nihongo yanen.
+          kore jituha nihongo yanen.
         </p>
       </div>
     </div>
