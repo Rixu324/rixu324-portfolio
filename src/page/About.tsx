@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 
 const AboutPage: React.FC = () => (
-  <div className="min-h-screen bg-[#f5f2ed] px-4 py-12 md:py-24">
+  <div className="min-h-screen bg-[#f5f2ed] px-4">
     <div className="container mx-auto max-w-4xl">
       <h1 className="text-center text-4xl font-bold tracking-tight mb-2">
         About Me
