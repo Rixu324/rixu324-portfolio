@@ -14,6 +14,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { FaYoutube } from "react-icons/fa";
 import wingman from "../assets/wingman.png";
 import aquaBeats from "../assets/qauaBeats.png";
+import myPortFolio from "../assets/portFolio_icon.png";
 
 interface Project {
   id: number;
@@ -79,7 +80,7 @@ const projects: Project[] = [
     id: 3,
     title: "俺のポートフォリオ",
     description: "まぁ、これっすね",
-    image: "/placeholder.svg?height=200&width=300",
+    image: myPortFolio,
     details: "これよね",
     type: "web",
     value1: "https://www.rixu.info",
