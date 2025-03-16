@@ -23,7 +23,7 @@ const Navigation: React.FC = () => {
         <li>
           <a
             href="/#projects"
-            className="text-sky-400 hover:text-sky-600 transition-colors"
+            className="text-sky-400 hover:text-sky-600 transition-colors font-black"
           >
             WORKS
           </a>
@@ -31,7 +31,7 @@ const Navigation: React.FC = () => {
         <li>
           <a
             href="/about"
-            className="text-sky-400 hover:text-sky-600 transition-colors"
+            className="text-sky-400 hover:text-sky-600 transition-colors font-black"
           >
             ABOUT
           </a>
