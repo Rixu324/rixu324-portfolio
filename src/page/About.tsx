@@ -1,6 +1,8 @@
 import icon from "/src/assets/icon.png";
 import imocyaIcon from "/src/assets/imocya_icon.png";
 import mokasakanaIcon from "/src/assets/mokasakana_icon.png";
+import amahimeIcon from "/src/assets/amahimejyuri_icon.png";
+
 import { FaTwitch } from "react-icons/fa";
 import {
   Card,
@@ -239,9 +241,68 @@ const AboutPage: React.FC = () => (
             >
               <CardContent sx={{ p: 0 }}>
                 <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                  <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-                    あと一人準備中です。伝説の歌姫になります。
+                  <Avatar
+                    src={`${amahimeIcon}?height=100&width=100`}
+                    alt="配信者2のアイコン"
+                    sx={{
+                      width: 64,
+                      height: 64,
+                      border: "2px solid #ffff00",
+                      mr: 2,
+                    }}
+                  />
+                  <Typography
+                    variant="h6"
+                    sx={{ fontWeight: "bold", color: "#ffff00" }}
+                  >
+                    甘姫じゅり
                   </Typography>
+                </Box>
+                <Typography
+                  variant="body2"
+                  sx={{ color: "text.secondary", mb: 2 }}
+                >
+                  怪獣とチョコモチーフのお姫様らしい。怪獣のごとく声がでかい。元気。猪突猛進。俺は考えた。猪とチョコモチーフの方がいいか？ってさすがに却下されました。はい。人生歌にカンストしてる人だなと思ってます。
+                </Typography>
+                <Box sx={{ display: "flex", gap: 2 }}>
+                  <Link
+                    href="https://www.twitch.tv/amahime_juri3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "0.875rem",
+                      color: "#6a1b9a",
+                      textDecoration: "none",
+                      "&:hover": { color: "#4a148c" },
+                    }}
+                  >
+                    <FaTwitch style={{ marginRight: 4 }} />
+                    @amahime_juri3
+                  </Link>
+                  <Link
+                    href="https://x.com/amahime_juri3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "0.875rem",
+                      color: "#1565c0",
+                      textDecoration: "none",
+                      "&:hover": { color: "#0d47a1" },
+                    }}
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      style={{ width: 16, height: 16, marginRight: 4 }}
+                    >
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                    <span>@amahime_juri3</span>
+                  </Link>
                 </Box>
               </CardContent>
             </Card>
