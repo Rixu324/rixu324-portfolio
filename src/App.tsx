@@ -1,23 +1,14 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navigation from "./components/Navigation";
-import Home from "./page/Home";
-import AboutPage from "./page/About";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Portfolio from "./portfolio/Portfolio";
 
-const App: React.FC = () => {
+export default function App() {
   return (
-    <div className="min-h-screen bg-[#f5f2ed]">
-      <Router>
-        <div className="container mx-auto px-4 py-8">
-          <Navigation />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutPage />} />
-          </Routes>
-        </div>
-      </Router>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+        <Route path="/about" element={<Navigate to="/#about" replace />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
-};
-
-export default App;
+}
