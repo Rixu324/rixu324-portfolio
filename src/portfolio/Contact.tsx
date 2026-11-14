@@ -8,15 +8,16 @@ export function Contact({ narrow, icOn, icOff, ctaOn, ctaOff, toTop }: Pick<Port
         <p className="contact-title" data-rv="up">配信のこと、イベントのこと、<br />なんでも相談してください。</p>
         <p className="contact-description" data-rv="up" data-d="80">サービスの使い方から、イベント運営の依頼までなんでも</p>
         <div className="contact-action" data-rv="up" data-d="160">
-          <a className="contact-button" href="https://discord.gg/jaQSkdJXpk" target="_blank" rel="noopener noreferrer" onMouseEnter={ctaOn} onMouseLeave={ctaOff}>
+          <a className="contact-button" href="https://discord.gg/MSvyqYQZXk" target="_blank" rel="noopener noreferrer" onMouseEnter={ctaOn} onMouseLeave={ctaOff}>
             <span className="button-wipe" data-wipe=""></span>
             <span className="button-label">話してみる →</span>
           </a>
         </div>
         <div className="social-links" data-rv="up" data-d="240">
           
-          <a className="social-link" href="https://github.com/Rixu324" target="_blank" rel="noopener noreferrer" onMouseEnter={icOn} onMouseLeave={icOff}><span className="social-triangle" data-ic="tri"></span><span className="social-label">GitHub<span className="link-underline" data-ul=""></span></span></a>
-          <a className="social-link" href="https://discord.gg/jaQSkdJXpk" target="_blank" rel="noopener noreferrer" onMouseEnter={icOn} onMouseLeave={icOff}><span className="social-square" data-ic="square"></span><span className="social-label">Discord<span className="link-underline" data-ul=""></span></span></a>
+          <a className="social-link" href="https://x.com/R1xu_" target="_blank" rel="noopener noreferrer" onMouseEnter={icOn} onMouseLeave={icOff}><span className="social-triangle" data-ic="tri"></span><span className="social-label">X<span className="link-underline" data-ul=""></span></span></a>
+          <a className="social-link" href="https://discord.gg/MSvyqYQZXk" target="_blank" rel="noopener noreferrer" onMouseEnter={icOn} onMouseLeave={icOff}><span className="social-square" data-ic="square"></span><span className="social-label">Discord サポートサーバー<span className="link-underline" data-ul=""></span></span></a>
+          <a className="social-link" href="mailto:contact@palette-tool.com" onMouseEnter={icOn} onMouseLeave={icOff}><span className="social-circle" data-ic="circle"></span><span className="social-label">contact@palette-tool.com<span className="link-underline" data-ul=""></span></span></a>
           
         </div>
       </div>
