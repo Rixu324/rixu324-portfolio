@@ -17,14 +17,18 @@ npm run preview
 
 ## 主なファイル
 
-- `src/portfolio/PortfolioView.jsx`: Hero、作品ギャラリー、About、Contact、作品詳細モーダル。
-- `src/portfolio/portfolio.css`: 参考デザインのスタイルとレスポンシブ・フォーカス表示。
-- `src/portfolio/Portfolio.jsx`: 図形の物理アニメーション、スクロール連動、登場演出、モーダルの操作。
-- `src/portfolio/projects.ts`: 作品の説明、担当範囲、使用技術、外部リンク。
-- `src/portfolio/AdditionalContent.tsx`: 既存作品の追加一覧と支援中の配信者紹介。
+- `src/portfolio/PortfolioView.tsx`: ページ全体の組み立て。
+- `src/portfolio/PageHeader.tsx` / `Hero.tsx` / `Works.tsx` / `About.tsx` / `Contact.tsx`: 各セクションの表示。
+- `src/portfolio/ProjectDialog.tsx`: 作品詳細モーダル。
+- `src/portfolio/PaletteBot.tsx`: 見出し・作品・モーダルで共用するSVG。
+- `src/portfolio/portfolio.css`: 意味の分かるクラス名で管理するスタイルとレスポンシブ・フォーカス表示。
+- `src/portfolio/Portfolio.jsx`: 図形の物理アニメーション、スクロール連動、登場演出、モーダルの操作と後片付け。
+- `src/portfolio/shapeData.js`: 図形の定義、3種類の配置、PaletteBotへの変形先。
+- `src/portfolio/projects.ts` / `projectDetails.ts`: 作品データとモーダル表示用データの生成。
+- `src/portfolio/viewTypes.ts`: 表示コンポーネント間で共有する型。
 - `public/portfolio/`: 参考デザインのプロフィール・作品画像。
 
-参考のモック独自ランタイム（support.js / DCLogic）には依存しません。モーションのJavaScriptをReactのライフサイクルへ移植し、既存のTypeScriptコードと共存しています。追加のランタイム依存はありません。
+参考のモック独自ランタイム（support.js / DCLogic）には依存しません。モーションはJavaScript、表示コンポーネントと作品データはTypeScriptです。旧ページ、MUI・Emotion・アイコンライブラリ、Tailwindと専用PostCSS設定は削除し、通常のCSSを使用しています。
 
 ## 操作
 
@@ -34,6 +38,7 @@ npm run preview
 - 詳細は左右ボタンまたは矢印キーで切り替え、閉じるボタン／背景／Escapeで閉じます。
 - モーダル内はTabキーで移動でき、閉じると元の作品にフォーカスが戻ります。
 - モバイルでは作品を縦に配置します。OSの「動きを減らす」にも対応しています。
+- 「動きを減らす」が有効な場合、図形用の継続的なアニメーションループは起動しません。
 
 ## 掲載内容の補完箇所
 
@@ -41,8 +46,6 @@ npm run preview
 
 ## 既存サイトとの互換性
 
-- AquaBeatsと既存ポートフォリオ作品はMore worksから引き続き参照できます。
-- 既存Aboutの配信者3名のTwitch / Xリンクと開発スキルを移植しています。
 - `/about` は `/#about` に転送し、旧 `/#projects` はWorkに移動します。
 - Vercel Analytics / Speed Insightsと既存のデプロイ設定を維持しています。
 
