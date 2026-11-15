@@ -47,7 +47,6 @@ a{color:#EDEBE6;text-decoration:none}a:hover{color:#3DFFA8}
 .bot-pulse{position:absolute;inset:-3%;background:#3DFFA8;clip-path:polygon(50% 4%,100% 96%,0 96%);animation:ringPulse 2.2s ease-out infinite;pointer-events:none}
 .bot-ring{position:absolute;inset:-2%;background:#3DFFA8;clip-path:polygon(50% 4%,100% 96%,0 96%);pointer-events:none}
 .bot-shape{position:absolute;inset:0;padding:0;border:0;cursor:pointer;overflow:hidden;clip-path:polygon(50% 4%,50% 4%,100% 96%,0% 96%);transition:clip-path .6s cubic-bezier(0.16,1,0.3,1);background:radial-gradient(#EDEBE6 1.3px,transparent 1.8px) 0 0/11px 11px,#141418}
-.card-bot-mark{position:absolute;left:50%;top:64%;width:34%;transform:translate(-50%,-50%);overflow:visible}
 .label-twitch{position:absolute;right:66%;top:30%;display:flex;flex-direction:row-reverse;align-items:center;gap:10px;white-space:nowrap;pointer-events:none}
 .label-copy-right{display:flex;flex-direction:column;gap:2px;text-align:right}
 .event-position{position:absolute;left:64cqw;top:2cqw;width:28cqw;aspect-ratio:1;z-index:3;transition:opacity .3s;will-change:transform}
@@ -60,7 +59,6 @@ a{color:#EDEBE6;text-decoration:none}a:hover{color:#3DFFA8}
 .konbu-position{position:absolute;left:8cqw;top:56cqw;width:24cqw;aspect-ratio:1;z-index:4;transition:opacity .3s;will-change:transform}
 .label-konbu{position:absolute;left:14%;top:91%;display:flex;flex-direction:column;align-items:flex-start;gap:8px;white-space:nowrap;pointer-events:none}
 .wingman-position{position:absolute;left:30cqw;top:70cqw;width:26cqw;aspect-ratio:1;z-index:6;transition:opacity .3s;will-change:transform}
-.service-project-image{position:absolute;inset:12%;width:76%;height:76%;object-fit:contain}
 .cover-image{display:block;width:100%;height:100%;object-fit:cover}
 .label-wingman{position:absolute;left:22%;top:97%;display:flex;flex-direction:column;align-items:flex-start;gap:8px;white-space:nowrap;pointer-events:none}
 .mobile-gallery{container-type:inline-size}
