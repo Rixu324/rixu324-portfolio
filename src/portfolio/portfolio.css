@@ -1,5 +1,5 @@
 
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:clip}
 body{margin:0;background:#0B0B0D;color:#EDEBE6;font-family:'Space Grotesk','Noto Sans JP',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{color:#EDEBE6;text-decoration:none}a:hover{color:#3DFFA8}
 @keyframes ringPulse{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.09);opacity:0}}
@@ -184,6 +184,29 @@ a{color:#EDEBE6;text-decoration:none}a:hover{color:#3DFFA8}
 .project-pagination{display:flex;justify-content:space-between;gap:12px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08)}
 .project-page-button{min-height:44px;padding:0 14px;background:none;border:1px solid rgba(255,255,255,.14);border-radius:4px;font:500 13px 'Space Grotesk','Noto Sans JP',sans-serif;color:#EDEBE6;cursor:pointer;transition:border-color .2s}
 .project-page-button:hover{border-color:#EDEBE6}
+.project-link-icon{display:none;width:22px;height:22px;flex:none}
+@media(max-width:700px){
+  .project-dialog{max-height:calc(100svh - 24px)}
+  .modal-columns{grid-template-columns:minmax(0,1fr)}
+  .project-art{min-height:clamp(140px,24svh,200px)}
+  .project-art-website{min-height:clamp(180px,28svh,240px)}
+  .project-info{padding:14px 16px;gap:12px}
+  .modal-header{font-size:11px}
+  .modal-close{padding:0 10px;font-size:12px}
+  .project-title{font-size:22px;line-height:1.25;overflow-wrap:anywhere}
+  .project-tags{gap:6px;margin-top:8px}
+  .project-tag{padding:3px 8px;font-size:11px}
+  .project-description{font-size:13px;line-height:1.7}
+  .project-scope{display:none}
+  .project-links{gap:8px;padding-top:0}
+  .project-links a{width:44px;height:44px;min-height:44px;padding:0;justify-content:center;border-radius:8px}
+  .project-link-icon{display:block}
+  .project-link-label{display:none}
+  .project-website-toolbar{padding:2px 12px;font-size:11px}
+  .project-website-toolbar a{width:44px;min-height:44px;justify-content:center}
+  .project-pagination{padding-top:10px}
+  .project-page-button{font-size:12px;padding:0 10px}
+}
 /* Production usability additions. */
 *{box-sizing:border-box}
 body{min-width:320px}

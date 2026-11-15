@@ -23,7 +23,7 @@ export const projects: Project[] = [
         scope: ['企画', '開発', '運営'], tech: [], links: [{ label: 'サイトへ', href: 'https://www.palette-tool.com/palettebot' }] },
     { title: 'PalentiaCraft', cat: 'Event', tags: ['主催イベント運営'], img: '/portfolio/palentiacraft.jpg', imgFit: 'contain', details: '女性活動者限定マインクラフトストリーマーサーバーです。\n\n活動者が交流・自分を演出できる場だけでなくリスナーさんも楽しんでいただけるようなイベントを用意・運営しております。', scope: ['企画', '運営'], tech: [], links: [{ label: 'サイトへ', href: 'https://www.palentia-craft.com/' }] },
     { title: 'あらいぐま杯HP', cat: 'Web', tags: ['HP制作・運営'], img: '', previewUrl: 'https://www.arairikuv.com/', details: '新井麗琥さん主催のVALORANTコミュニティ大会です。\n\nサイトの作成、大会運営BOTの提供、運営スタッフ支援を行いました。', scope: ['デザイン', '開発', '運営'], tech: [], links: [{ label: 'サイトへ', href: 'https://www.arairikuv.com/' }, { label: '新井麗琥さん（X）', href: 'https://x.com/ARAI_RIKUv' }] },
-    { title: 'こんぶちゃん公式HP', cat: 'Web', tags: ['HP制作'], img: '', details: '海藻小悪魔系VTuber・こんぶちゃんの公式サイト。', scope: ['デザイン', '開発'], tech: [], links: [{ label: 'サイトへ', href: 'https://www.konbuchan07.com/' }] },
+    { title: 'こんぶちゃん公式HP', cat: 'Web', tags: ['HP制作'], img: '/portfolio/konbuchan.jpg', imgFit: 'contain', details: '海藻小悪魔系VTuber・こんぶちゃんの公式サイト。', scope: ['デザイン', '開発'], tech: [], links: [{ label: 'サイトへ', href: 'https://www.konbuchan07.com/' }] },
     { title: 'ウィングマンくん', cat: 'BOT', tags: ['Discord BOT'], img: '/portfolio/wingman.png',
         details: 'ウィングマンくんは、Valorantのカスタムマッチでいろいろ手助けをしてくれるBOTです。ランダムでチーム分けをしたり、ランダムでマップなどを出してくれます。',
         scope: ['企画', '開発', '運営'], tech: [],
