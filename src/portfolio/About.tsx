@@ -28,9 +28,11 @@ export function About({ narrow, icOn, icOff }: Pick<PortfolioViewProps, "narrow"
     </div></div>
       </>}
       <div className="about-text">
-        <p className="about-intro" data-rv="up">システムエンジニアとして働きながら、個人でWebサービスやDiscord BOTを作っています。</p>
-        <p className="about-paragraph" data-rv="up" data-d="80">配信者さんの裏方もしていて、そこで気づいたのは「配信の外にも、地味で手間のかかる作業がたくさんある」ということでした。告知や集計、イベントの準備、毎回の細かな設定。そういう配信以外の作業はできるだけシステムに任せて、配信者さんには配信そのものに集中してほしいと思っています。</p>
+        <p className="about-intro" data-rv="up">システムエンジニアとして働きながら、個人でWebサービスやDiscord BOTなどを作っています。</p>
+        <p className="about-paragraph" data-rv="up" data-d="80">楽しいことを考えたり、形にしたりするのが好きです。<br />きっかけは、一人の配信者さんのサポートでした。今ではさまざまな配信者さんと関わりながら、システムづくりを通じて活動をお手伝いしています。</p>
+        <p className="about-paragraph" data-rv="up" data-d="80">また、イベントの企画・主催・運営も行っています。参加する人はもちろん、見ている人も一緒に楽しめる場をつくりたいと思っています。</p>
         <p className="about-aside" data-rv="up" data-d="160">まぁ要するに、いろいろやってます。</p>
+        <p className="about-paragraph" data-rv="up" data-d="160">ゲームも好きなので、気軽に仲良くしてください！</p>
       </div>
       <div className="profile-facts" data-rv="up">
         <div className="profile-row"><span className="muted-label">Name</span><span className="profile-name">りゅま <span className="profile-alias">/ Rixu</span></span></div>

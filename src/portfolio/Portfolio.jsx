@@ -458,8 +458,14 @@ export default class Portfolio extends React.Component {
     frame(t, dt) {
         if (!this.S)
             return;
-        const p = Math.max(0, Math.min(1, scrollY / (this.vh * 0.9))), u = this.u;
-        const A = p > 0 && this.land ? this.land.getBoundingClientRect() : null;
+        const landing = this.land?.getBoundingClientRect();
+        // Complete the mobile handoff while the Work heading is still low in view.
+        // Use its actual position so browser chrome and viewport resizing stay in sync.
+        const progress = this.mqN.matches && landing
+            ? (this.vh * 1.1 - landing.top) / (this.vh * 0.42)
+            : scrollY / (this.vh * 0.9);
+        const p = Math.max(0, Math.min(1, progress)), u = this.u;
+        const A = p > 0 ? landing : null;
         let relayout = false;
         this.S.forEach(s => {
             if (this.started && !s.on && t >= s.at) {
@@ -561,7 +567,11 @@ export default class Portfolio extends React.Component {
         svg.style.opacity = on ? 1 : 0;
         if (!on)
             return;
-        const q = n => [...svg.querySelectorAll('[data-bp="' + n + '"]')], an = (el, kf, o) => el && el.animate(kf, { fill: 'backwards', easing: this.E, ...o });
+        const pace = this.mqN.matches ? 0.4 : 1;
+        const q = n => [...svg.querySelectorAll('[data-bp="' + n + '"]')], an = (el, kf, o) => el && el.animate(kf, {
+            fill: 'backwards', easing: this.E, ...o,
+            duration: o.duration * pace, delay: (o.delay || 0) * pace,
+        });
         const POP = [{ transform: 'scale(0)' }, { transform: 'scale(1.3)', offset: 0.55 }, { transform: 'scale(.92)', offset: 0.8 }, { transform: 'none' }];
         an(q('screen')[0], [{ opacity: 0, transform: 'scale(.6)' }, { opacity: 1, transform: 'none' }], { duration: 250, delay: 80 });
         q('ear').forEach((el, i) => an(el, [{ transform: 'translate(' + (i ? 34 : -34) + 'px,10px) rotate(' + (i ? 100 : -100) + 'deg)' }, { transform: 'none' }], { duration: 650, delay: 200 + i * 50 }));
@@ -570,7 +580,7 @@ export default class Portfolio extends React.Component {
         q('eye').forEach(el => an(el, POP, { duration: 450, delay: 1250, easing: 'ease-out' }));
         an(q('mouth')[0], POP, { duration: 450, delay: 1350, easing: 'ease-out' });
         an(q('beret')[0], [{ opacity: 0, transform: 'translateY(-70px) rotate(30deg)', easing: 'cubic-bezier(.5,0,.9,.6)' }, { opacity: 1, transform: 'none', offset: 0.55, easing: 'ease-out' }, { opacity: 1, transform: 'translateY(-7px) rotate(-5deg)', offset: 0.75, easing: 'ease-in' }, { opacity: 1, transform: 'none' }], { duration: 750, delay: 1550, easing: 'linear' });
-        this.botT = this.later(() => { this.botReady = true; this.blinkAt = performance.now() + 2500; }, 2350);
+        this.botT = this.later(() => { this.botReady = true; this.blinkAt = performance.now() + 2500; }, 2350 * pace);
     }
     botTick(t) {
         if (!this.botOn || !this.botReady)

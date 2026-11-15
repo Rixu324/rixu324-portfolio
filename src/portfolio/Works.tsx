@@ -53,11 +53,11 @@ export function Works({ narrow, botHover, gGo, gOn, gOff }: Pick<PortfolioViewPr
       <div className="konbu-position" data-gi="" data-depth="1" data-z="4">
         <div className="fill-parent" data-rv="pop" data-d="100"><div className="fill-parent">
           
-          <button className="web-shape" data-w="4" data-idle="inset(10%)" data-full="inset(0%)" aria-label="こんぶHP" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}></button>
+          <button className="web-shape" data-w="4" data-idle="inset(10%)" data-full="inset(0%)" aria-label="こんぶちゃん公式HP" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}></button>
         </div></div>
         <div className="label-konbu" data-rv="up" data-d="600">
           <span className="label-line-vertical"></span>
-          <span className="label-copy"><span className="work-number">05</span><span className="work-title">こんぶHP</span><span className="work-description">HP制作</span></span>
+          <span className="label-copy"><span className="work-number">05</span><span className="work-title">こんぶちゃん公式HP</span><span className="work-description">HP制作</span></span>
         </div>
       </div>
       <div className="wingman-position" data-gi="" data-depth="1.2" data-z="6">
@@ -119,11 +119,11 @@ export function Works({ narrow, botHover, gGo, gOn, gOff }: Pick<PortfolioViewPr
       <div className="mobile-work-left" data-gi="" data-z="1">
         <div className="square-frame"><div className="fill-parent" data-rv="pop" data-d="0"><div className="fill-parent">
           
-          <button className="web-shape" data-w="4" data-idle="inset(10%)" data-full="inset(0%)" aria-label="こんぶHP" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}></button>
+          <button className="web-shape" data-w="4" data-idle="inset(10%)" data-full="inset(0%)" aria-label="こんぶちゃん公式HP" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}></button>
         </div></div></div>
         <div className="mobile-web-label" data-rv="up" data-d="500">
           <span className="label-line-vertical"></span>
-          <span className="label-copy"><span className="work-number">05</span><span className="work-title">こんぶHP</span><span className="work-description">HP制作</span></span>
+          <span className="label-copy"><span className="work-number">05</span><span className="work-title">こんぶちゃん公式HP</span><span className="work-description">HP制作</span></span>
         </div>
       </div>
       <div className="mobile-work-right" data-gi="" data-z="1">

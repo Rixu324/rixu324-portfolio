@@ -20,7 +20,6 @@ a{color:#EDEBE6;text-decoration:none}a:hover{color:#3DFFA8}
 .hero-copy{position:relative;z-index:2;max-width:420px}
 .hero-name{font:500 18px 'Space Grotesk','Noto Sans JP',sans-serif}
 .hero-tagline{margin:14px 0 0;font:700 clamp(20px,2vw,28px)/1.55 'Noto Sans JP',sans-serif}
-.hero-services{margin:14px 0 0;font:400 14px 'Space Grotesk','Noto Sans JP',sans-serif;color:#A3A19B}
 .page-section{padding:clamp(80px,11vw,150px) clamp(20px,5vw,72px);max-width:1440px;margin:0 auto;box-sizing:border-box}
 .works-heading{display:flex;align-items:baseline;gap:clamp(22px,3.85vw,53px);margin-bottom:clamp(36px,5vw,64px)}
 .section-title{overflow:hidden;margin:0;font:700 clamp(40px,7vw,96px)/1.15 'Space Grotesk',sans-serif;letter-spacing:-.03em}
@@ -166,7 +165,7 @@ a{color:#EDEBE6;text-decoration:none}a:hover{color:#3DFFA8}
 .project-title{margin:0;font:700 clamp(26px,3.2vw,40px)/1.25 'Space Grotesk','Noto Sans JP',sans-serif}
 .project-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .project-tag{padding:4px 10px;border:1px solid rgba(255,255,255,.14);border-radius:4px;font:400 13px 'Noto Sans JP',sans-serif;color:#A3A19B}
-.project-description{margin:0;font:400 15px/1.95 'Noto Sans JP',sans-serif;text-wrap:pretty}
+.project-description{margin:0;white-space:pre-line;font:400 15px/1.95 'Noto Sans JP',sans-serif;text-wrap:pretty}
 .detail-label{font:500 13px 'Noto Sans JP',sans-serif;color:#8A8A8A}
 .detail-values{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .scope-tag{padding:6px 12px;border-radius:4px;background:rgba(237,235,230,.08);font:500 13px 'Noto Sans JP',sans-serif;color:#EDEBE6}
@@ -196,4 +195,8 @@ section,footer{scroll-margin-top:72px}
 [data-gallery] button:focus-visible{outline-offset:-6px}
 [role=dialog]{overscroll-behavior:contain}
 @media(max-width:700px){nav{gap:14px!important}nav>div{gap:18px!important}nav a{font-size:12px} [role=dialog] h3{overflow-wrap:anywhere}}
+@media(max-width:700px){
+  .site-nav{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;mix-blend-mode:difference}
+  .site-nav a{color:#EDEBE6}
+}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
