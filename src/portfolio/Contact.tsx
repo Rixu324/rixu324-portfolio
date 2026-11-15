@@ -35,12 +35,12 @@ export function Contact({ narrow, icOn, icOff, ctaOn, ctaOff, toTop }: Pick<Port
     </div>
     {!narrow && <> 
       <div className="footer-desktop">
-        <span>© 2026 Rixu</span><span className="air-status"><span className="air-dot" data-flamp=""></span><span data-fon="">ON AIR</span><span className="air-off" data-foff="">OFF AIR</span></span><span className="back-top-wrap"><a className="back-top" href="#top" onClick={toTop}>↑ TOPへ戻る</a></span>
+        <span>2026 Rixu</span><span className="air-status"><span className="air-dot" data-flamp=""></span><span data-fon="">ON AIR</span><span className="air-off" data-foff="">OFF AIR</span></span><span className="back-top-wrap"><a className="back-top" href="#top" onClick={toTop}>↑ TOPへ戻る</a></span>
       </div>
     </>}
     {narrow && <> 
       <div className="footer-mobile">
-        <span className="footer-meta"><span>© 2026 Rixu</span><span className="air-status"><span className="air-dot" data-flamp=""></span><span data-fon="">ON AIR</span><span className="air-off" data-foff="">OFF AIR</span></span></span><a className="back-top" href="#top" onClick={toTop}>↑ TOP</a>
+        <span className="footer-meta"><span>2026 Rixu</span><span className="air-status"><span className="air-dot" data-flamp=""></span><span data-fon="">ON AIR</span><span className="air-off" data-foff="">OFF AIR</span></span></span><a className="back-top" href="#top" onClick={toTop}>↑ TOP</a>
       </div>
     </>}
   </div>

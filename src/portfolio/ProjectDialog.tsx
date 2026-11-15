@@ -9,8 +9,12 @@ export function ProjectDialog({ sel, panelRef, backRef, close, prev, next }: Pic
     <div className="modal-backdrop" ref={backRef} onClick={close}></div>
     <div className="project-dialog" ref={panelRef} role="dialog" aria-modal="true" aria-labelledby="project-title" tabIndex={-1}>
       <div className="modal-columns" data-mc="">
-        <div className="project-art">
-          {sel.hasImg && <> <div style={{ "position": "absolute", "inset": "0", "backgroundImage": sel.imgBg, "backgroundSize": "cover", "backgroundPosition": "center" }} role="img" aria-label={sel.title}></div></>}
+        <div className={sel.previewUrl ? "project-art project-art-website" : "project-art"}>
+          {sel.previewUrl && <div className="project-website">
+            <div className="project-website-toolbar"><span>サイトプレビュー</span><a href={sel.previewUrl} target="_blank" rel="noopener noreferrer">別タブで開く ↗</a></div>
+            <iframe key={sel.previewUrl} className="project-website-frame" src={sel.previewUrl} title={`${sel.title} サイトプレビュー`} loading="lazy" referrerPolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox" />
+          </div>}
+          {sel.hasImg && <> <div style={{ "position": "absolute", "inset": "0", "backgroundImage": sel.imgBg, "backgroundSize": sel.imgFit || "cover", "backgroundPosition": "center", "backgroundRepeat": "no-repeat" }} role="img" aria-label={sel.title}></div></>}
           {sel.isPB && <> <PaletteBot className="modal-bot-mark"/></>}
           {sel.isService && <> <span className="modal-service-mark"></span></>}{sel.isBot && <> <span className="modal-bot-fallback"></span></>}{sel.isWeb && <> <span className="modal-web-mark"></span></>}{sel.isEvent && <> <span className="modal-event-mark"></span></>}
         </div>

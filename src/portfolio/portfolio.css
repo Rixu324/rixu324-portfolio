@@ -60,6 +60,7 @@ a{color:#EDEBE6;text-decoration:none}a:hover{color:#3DFFA8}
 .konbu-position{position:absolute;left:8cqw;top:56cqw;width:24cqw;aspect-ratio:1;z-index:4;transition:opacity .3s;will-change:transform}
 .label-konbu{position:absolute;left:14%;top:91%;display:flex;flex-direction:column;align-items:flex-start;gap:8px;white-space:nowrap;pointer-events:none}
 .wingman-position{position:absolute;left:30cqw;top:70cqw;width:26cqw;aspect-ratio:1;z-index:6;transition:opacity .3s;will-change:transform}
+.service-project-image{position:absolute;inset:12%;width:76%;height:76%;object-fit:contain}
 .cover-image{display:block;width:100%;height:100%;object-fit:cover}
 .label-wingman{position:absolute;left:22%;top:97%;display:flex;flex-direction:column;align-items:flex-start;gap:8px;white-space:nowrap;pointer-events:none}
 .mobile-gallery{container-type:inline-size}
@@ -150,10 +151,16 @@ a{color:#EDEBE6;text-decoration:none}a:hover{color:#3DFFA8}
 .footer-meta{display:flex;align-items:center;gap:14px}
 .modal-overlay{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:clamp(12px,3vw,40px);box-sizing:border-box}
 .modal-backdrop{position:absolute;inset:0;background:rgba(6,6,7,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-.project-dialog{position:relative;width:min(1040px,100%);max-height:90svh;overflow:auto;background:#141416;border:1px solid rgba(237,235,230,.2);border-radius:8px;transform-origin:0 0}
+.project-dialog{position:relative;width:min(1040px,100%);max-height:90svh;overflow-x:hidden;overflow-y:auto;background:#141416;border:1px solid rgba(237,235,230,.2);border-radius:8px;transform-origin:0 0}
 .modal-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
 .project-art{position:relative;min-height:clamp(220px,34vw,420px);background:#141418;display:flex;align-items:center;justify-content:center}
 .modal-bot-mark{width:46%;overflow:visible}
+.project-art-website{min-width:0;min-height:480px}
+.project-website{position:absolute;inset:0;display:flex;flex-direction:column;overflow:hidden}
+.project-website-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.14);font-size:12px}
+.project-website-toolbar a{display:inline-flex;align-items:center;min-height:32px;color:#3DFFA8}
+.project-website-frame{display:block;flex:1;min-height:0;width:100%;border:0;background:#fff}
+@media(max-width:700px){.project-art-website{min-height:clamp(320px,60svh,560px)}}
 .modal-service-mark{flex:none;width:38%;aspect-ratio:1;border-radius:50%;background:#3DFFA8;}
 .modal-bot-fallback{flex:none;width:38%;aspect-ratio:1;background:#EDEBE6;clip-path:polygon(50% 8%,100% 92%,0 92%);}
 .modal-web-mark{flex:none;width:38%;aspect-ratio:1;background:#EDEBE6;}

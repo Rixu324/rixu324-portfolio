@@ -1,5 +1,6 @@
 import type { PortfolioViewProps } from "./viewTypes";
 import { PaletteBot } from "./PaletteBot";
+import { projects } from "./projects";
 export function Works({ narrow, botHover, gGo, gOn, gOff }: Pick<PortfolioViewProps, "narrow" | "botHover" | "gGo" | "gOn" | "gOff">) {
     return <>
     <section className="page-section" id="works">
@@ -13,7 +14,7 @@ export function Works({ narrow, botHover, gGo, gOn, gOff }: Pick<PortfolioViewPr
       <div className="palette-tool-position" data-gi="" data-depth="0.3" data-z="1">
         <div className="fill-parent" data-rv="pop" data-d="0"><div className="fill-parent">
           <span className="service-pulse" data-ring=""></span><span className="service-ring" data-ring=""></span>
-          <button className="service-shape" data-w="0" data-idle="inset(0% round 50%)" data-full="inset(0% round 0%)" aria-label="PaletteTool" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}></button>
+          <button className="service-shape" data-w="0" data-idle="inset(0% round 50%)" data-full="inset(0% round 0%)" aria-label="PaletteTool" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}><img className="service-project-image" src={projects[0].img} alt="" loading="lazy"/></button>
         </div></div>
         <div className="label-service" data-rv="up" data-d="500">
           <span className="label-line"></span>
@@ -23,7 +24,7 @@ export function Works({ narrow, botHover, gGo, gOn, gOff }: Pick<PortfolioViewPr
       <div className="twitch-position" data-gi="" data-depth="0.4" data-z="2">
         <div className="fill-parent" data-rv="pop" data-d="100"><div className="fill-parent">
           <span className="bot-pulse" data-ring=""></span><span className="bot-ring" data-ring=""></span>
-          <button className="bot-shape" data-w="1" data-idle="polygon(50% 4%,50% 4%,100% 96%,0% 96%)" data-full="polygon(0% 0%,100% 0%,100% 100%,0% 100%)" aria-label="PaletteBot for Twitch" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}><PaletteBot className="card-bot-mark"/></button>
+          <button className="bot-shape" data-w="1" data-idle="polygon(50% 4%,50% 4%,100% 96%,0% 96%)" data-full="polygon(0% 0%,100% 0%,100% 100%,0% 100%)" aria-label="PaletteBot for Twitch" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}><img className="card-bot-mark" src={projects[1].img} alt="" loading="lazy"/></button>
         </div></div>
         <div className="label-twitch" data-rv="up" data-d="600">
           <span className="label-line"></span>
@@ -33,7 +34,7 @@ export function Works({ narrow, botHover, gGo, gOn, gOff }: Pick<PortfolioViewPr
       <div className="event-position" data-gi="" data-depth="0.9" data-z="3">
         <div className="fill-parent" data-rv="pop" data-d="200"><div className="fill-parent">
           
-          <button className="event-shape" data-w="2" data-idle="inset(25% 0% 25% 0% round 14cqw 14cqw 0cqw 0cqw)" data-full="inset(0% 0% 0% 0% round 0cqw 0cqw 0cqw 0cqw)" aria-label="PalentiaCraft" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}></button>
+          <button className="event-shape" data-w="2" data-idle="inset(25% 0% 25% 0% round 14cqw 14cqw 0cqw 0cqw)" data-full="inset(0% 0% 0% 0% round 0cqw 0cqw 0cqw 0cqw)" aria-label="PalentiaCraft" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}><img className="cover-image" src={projects[2].img} alt="" loading="lazy"/></button>
         </div></div>
         <div className="label-event" data-rv="up" data-d="700">
           <span className="label-line-vertical"></span>
@@ -79,7 +80,7 @@ export function Works({ narrow, botHover, gGo, gOn, gOff }: Pick<PortfolioViewPr
       <div className="mobile-leading-left" data-gi="" data-z="1">
         <div className="square-frame"><div className="fill-parent" data-rv="pop" data-d="0"><div className="fill-parent">
           <span className="service-pulse" data-ring=""></span><span className="service-ring" data-ring=""></span>
-          <button className="service-shape" data-w="0" data-idle="inset(0% round 50%)" data-full="inset(0% round 0%)" aria-label="PaletteTool" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}></button>
+          <button className="service-shape" data-w="0" data-idle="inset(0% round 50%)" data-full="inset(0% round 0%)" aria-label="PaletteTool" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}><img className="service-project-image" src={projects[0].img} alt="" loading="lazy"/></button>
         </div></div></div>
         <div className="mobile-label" data-rv="up" data-d="500">
           <span className="label-line-vertical"></span>
@@ -89,7 +90,7 @@ export function Works({ narrow, botHover, gGo, gOn, gOff }: Pick<PortfolioViewPr
       <div className="mobile-leading-right" data-gi="" data-z="1">
         <div className="square-frame"><div className="fill-parent" data-rv="pop" data-d="0"><div className="fill-parent">
           <span className="bot-pulse" data-ring=""></span><span className="bot-ring" data-ring=""></span>
-          <button className="bot-shape" data-w="1" data-idle="polygon(50% 4%,50% 4%,100% 96%,0% 96%)" data-full="polygon(0% 0%,100% 0%,100% 100%,0% 100%)" aria-label="PaletteBot for Twitch" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}><PaletteBot className="card-bot-mark"/></button>
+          <button className="bot-shape" data-w="1" data-idle="polygon(50% 4%,50% 4%,100% 96%,0% 96%)" data-full="polygon(0% 0%,100% 0%,100% 100%,0% 100%)" aria-label="PaletteBot for Twitch" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}><img className="card-bot-mark" src={projects[1].img} alt="" loading="lazy"/></button>
         </div></div></div>
         <div className="mobile-label" data-rv="up" data-d="500">
           <span className="label-line-vertical"></span>
@@ -99,7 +100,7 @@ export function Works({ narrow, botHover, gGo, gOn, gOff }: Pick<PortfolioViewPr
       <div className="mobile-work-left" data-gi="" data-z="1">
         <div className="square-frame"><div className="fill-parent" data-rv="pop" data-d="0"><div className="fill-parent">
           
-          <button className="mobile-event-shape" data-w="2" data-idle="inset(25% 0% 25% 0% round 29cqw 29cqw 0cqw 0cqw)" data-full="inset(0% 0% 0% 0% round 0cqw 0cqw 0cqw 0cqw)" aria-label="PalentiaCraft" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}></button>
+          <button className="mobile-event-shape" data-w="2" data-idle="inset(25% 0% 25% 0% round 29cqw 29cqw 0cqw 0cqw)" data-full="inset(0% 0% 0% 0% round 0cqw 0cqw 0cqw 0cqw)" aria-label="PalentiaCraft" onClick={gGo} onMouseEnter={gOn} onMouseLeave={gOff}><img className="cover-image" src={projects[2].img} alt="" loading="lazy"/></button>
         </div></div></div>
         <div className="mobile-event-label" data-rv="up" data-d="500">
           <span className="label-line-vertical"></span>
